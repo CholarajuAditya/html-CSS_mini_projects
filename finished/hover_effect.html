@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 230px;
+      }
+      .input-field input {
+        padding: 5px;
+        width: 100%;
+      }
+      .input-field {
+        position: relative;
+        padding: 10px;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+      }
+      .input-field label {
+        position: absolute;
+        left: 0;
+        margin-left: 15px;
+      }
+      .input-field input:focus ~ label {
+        top: 7%;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-field">
+        <input type="text" />
+        <label for="">Sample</label>
+      </div>
+    </div>
+  </body>
+</html>

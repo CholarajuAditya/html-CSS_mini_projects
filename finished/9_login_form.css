@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 254, 246);
+}
+
+/* linear-gradient(to top right, rgb(76, 76, 207), rgb(180, 32, 180)); */
+
+.container {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .title {
+    font-size: 35px;
+    color: white;
+    background: linear-gradient(to top right, rgb(76, 76, 207), rgb(180, 32, 180));
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 25px 25px 0 0;
+    font-weight: bold;
+}
+
+.container form {
+    width: 100%;
+    padding: 10px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+form .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    outline: none;
+    padding: 0 0 0 20px;
+    font-size: 17px;
+}
+
+form .field label {
+    top: 50%;
+    position: absolute;
+    left: 0px;
+    transform: translateY(-50%);
+    margin-left: 20px;
+    color: rgb(171, 171, 171);
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+
+form a {
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+form .login-action,
+.sign-up {
+    margin-top: 15px;
+}
+
+#login {
+    background: linear-gradient(to top right, rgb(76, 76, 207), rgb(180, 32, 180));
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#login:active {
+    transform: scale(0.95);
+}
+
+
+form .field input:focus~label,
+form .field input:valid~label {
+    top: 0%;
+    color: rgb(107, 107, 209);
+    background-color: white;
+}
+
+
+form .field input:focus,
+form .field input:valid {
+    border-color: rgb(107, 107, 209);
+}
